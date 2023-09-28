@@ -26,7 +26,7 @@ async def handle(request: fastapi.Request):
     except:
         json_payload = {}
 
-    text = 'Coming Soon. I am gonna love you'
+    text = 'Coming Soon. Sample text, HI, Bye'
     character = 10
     chunks = [text[i: i + character] for i in range(0, len(text), character)]
 
@@ -47,4 +47,4 @@ async def handle(request: fastapi.Request):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host='0.0.0.0', port=1025, ssl_keyfile="privkey.pem", ssl_certfile="cert.pem")
+    uvicorn.run(app, host='0.0.0.0', port=1025)
